@@ -12,18 +12,20 @@ public class Producto {
 	 * 
 	 */
 	private String codigo;
-	private float precioBase;
+	private Double precioBase;
 	private String nombre;
 	private Boolean generico;
 	private Boolean suplemento; 
 	private Integer cantidaVitaminas;
-	private char informacionVitaminas;
-	private char contraindicaciones;
+	private String informacionVitaminas;
+	private String contraindicaciones;
 	
 	//constructores
+	
+	
 
-	public Producto(String codigo, float precioBase, String nombre, Boolean generico, Boolean suplemento,
-			Integer cantidaVitaminas, char informacionVitaminas, char contraindicaciones) {
+	public Producto(String codigo, Double precioBase, String nombre, Boolean generico, Boolean suplemento,
+			Integer cantidaVitaminas, String string, String string2) {
 		super();
 		this.codigo = codigo;
 		this.precioBase = precioBase;
@@ -31,12 +33,21 @@ public class Producto {
 		this.generico = generico;
 		this.suplemento = suplemento;
 		this.cantidaVitaminas = cantidaVitaminas;
-		this.informacionVitaminas = informacionVitaminas;
-		this.contraindicaciones = contraindicaciones;
+		this.informacionVitaminas = string;
+		this.contraindicaciones = string2;
 	}
 	
 	
+	
+	
 	// geters y seters
+
+	public Producto() {
+		super();
+	}
+
+
+
 
 	public String getCodigo() {
 		return codigo;
@@ -48,11 +59,11 @@ public class Producto {
 		this.codigo = codigo;
 	}
 
-	public float getPrecioBase() {
+	public Double getPrecioBase() {
 		return precioBase;
 	}
 
-	public void setPrecioBase(float precioBase) {
+	public void setPrecioBase(Double precioBase) {
 		this.precioBase = precioBase;
 	}
 
@@ -80,19 +91,19 @@ public class Producto {
 		this.cantidaVitaminas = cantidaVitaminas;
 	}
 
-	public char getInformacionVitaminas() {
+	public String getInformacionVitaminas() {
 		return informacionVitaminas;
 	}
 
-	public void setInformacionVitaminas(char informacionVitaminas) {
+	public void setInformacionVitaminas(String informacionVitaminas) {
 		this.informacionVitaminas = informacionVitaminas;
 	}
 
-	public char getContraindicaciones() {
+	public String getContraindicaciones() {
 		return contraindicaciones;
 	}
 
-	public void setContraindicaciones(char contraindicaciones) {
+	public void setContraindicaciones(String contraindicaciones) {
 		this.contraindicaciones = contraindicaciones;
 	}
 
@@ -105,6 +116,10 @@ public class Producto {
 				+ generico + ", suplemento=" + suplemento + ", cantidaVitaminas=" + cantidaVitaminas
 				+ ", informacionVitaminas=" + informacionVitaminas + ", contraindicaciones=" + contraindicaciones + "]";
 	}
+	
+	
+	//METODOS--------------
+	
 	
 	
 	
