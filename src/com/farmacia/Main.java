@@ -28,6 +28,7 @@ public class Main {
 		
 
 		//RAMA PRINCIPAL
+		producto2.Totalizar(2);
 		
 	
 	}

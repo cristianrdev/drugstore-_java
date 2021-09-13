@@ -107,6 +107,14 @@ public class Producto {
 	
 	//METODOS--------------
 	
+	public void Totalizar(int num) {
+		System.out.println("");
+		System.out.println("----------TOTALIZANDO---------");
+		System.out.println("Precio Base de " + this.nombre +" ==>" + this.precioBase);
+		System.out.println("Precio Totalizado " + this.nombre +   " x (" + num + ") ==>"  + this.precioBase*num);
+	
+	}
+	
 	
 	
 	
