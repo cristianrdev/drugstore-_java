@@ -10,7 +10,7 @@ public class Producto {
 	 * 			-suplemento 
 	 * 
 	 * 
-	 */
+	 **/
 	private String codigo;
 	private Double precioBase;
 	private String nombre;
@@ -21,9 +21,6 @@ public class Producto {
 	private String contraindicaciones;
 	
 	//constructores
-	
-	
-
 	public Producto(String codigo, Double precioBase, String nombre, Boolean generico, Boolean suplemento,
 			Integer cantidaVitaminas, String string, String string2) {
 		super();
@@ -41,19 +38,9 @@ public class Producto {
 	
 	
 	// geters y seters
-
-	public Producto() {
-		super();
-	}
-
-
-
-
 	public String getCodigo() {
 		return codigo;
 	}
-
-
 
 	public void setCodigo(String codigo) {
 		this.codigo = codigo;
