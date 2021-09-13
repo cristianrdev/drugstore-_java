@@ -107,14 +107,40 @@ public class Producto {
 	
 	//METODOS--------------
 	
+
+	
+	public Double Recargar(Producto producto) {
+		double recargo = 1;
+		
+		producto.getPrecioBase();
+		if(producto.generico== true) {
+			System.out.println("Medicamento genérico sin recargo");
+		}
+		
+		if(producto.generico == false && producto.suplemento == false) {
+			recargo = 1.2;
+			System.out.println("Recargo 20% de medicamento NO GENERICO " + recargo);
+			
+		}
+		
+		if(producto.suplemento == true) {
+			recargo = 0.02 * producto.cantidaVitaminas;
+			System.out.println("Recargo "+ recargo*100 +"% en suplementos por contener " + producto.cantidaVitaminas + " vitaminas");
+			recargo = (1+recargo);
+		}
+		
+		
+		
+		return (recargo);
+	}
+	
 	public void Totalizar(int num) {
 		System.out.println("");
 		System.out.println("----------TOTALIZANDO---------");
 		System.out.println("Precio Base de " + this.nombre +" ==>" + this.precioBase);
-		System.out.println("Precio Totalizado " + this.nombre +   " x (" + num + ") ==>"  + this.precioBase*num);
+		System.out.println("Precio Totalizado " + this.nombre +   " x (" + num + ") ==>"  + this.precioBase*num*this.Recargar(this));
 	
 	}
-	
 	
 	
 	
